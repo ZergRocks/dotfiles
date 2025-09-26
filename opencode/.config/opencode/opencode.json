@@ -1,0 +1,46 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "permission": {
+    "external_directory": "allow",
+    "bash": {
+      "*": "allow",
+      "fish -c *": "allow",
+      "rm *": "ask",
+      "git commit *": "ask",
+      "git push *": "ask",
+      "git reset *": "ask",
+      "git rebase *": "ask",
+      "git checkout *": "ask",
+      "git merge *": "ask",
+      "git stash *": "ask",
+      "mv *": "ask",
+      "chmod *": "ask",
+      "chown *": "ask",
+      "sudo *": "ask",
+      "npm publish *": "ask",
+      "yarn publish *": "ask",
+      "docker rm *": "ask",
+      "docker rmi *": "ask",
+      "kubectl delete *": "ask",
+      "aws * delete*": "ask",
+      "aws * remove*": "ask"
+    }
+  },
+  "mcp": {
+    "sequential-thinking": {
+      "type": "local",
+      "command": ["npx", "-y", "@modelcontextprotocol/server-sequential-thinking"],
+      "enabled": true
+    },
+    "context7": {
+      "type": "remote",
+      "url": "https://mcp.context7.com/mcp",
+      "enabled": true
+    },
+    "serena": {
+      "type": "local",
+      "command": ["uvx", "--from", "git+https://github.com/oraios/serena", "serena", "start-mcp-server"],
+      "enabled": true
+    }
+  }
+}
