@@ -4,15 +4,15 @@
 
 ## 포함된 도구
 
-| 카테고리 | 도구 |
-|----------|------|
-| Editor | Neovim + LazyVim |
-| Terminal | WezTerm (Nightly) |
-| Shell | Fish + Starship |
-| Multiplexer | tmux |
-| AI | OpenCode + MCP servers |
-| Languages | Python (Miniconda), Node.js, Go, Rust |
-| Kubernetes | kubectl, kubectx, k9s, aws-vault |
+| 카테고리    | 도구                                  |
+| ----------- | ------------------------------------- |
+| Editor      | Neovim + LazyVim                      |
+| Terminal    | WezTerm (Nightly)                     |
+| Shell       | Fish + Starship                       |
+| Multiplexer | tmux                                  |
+| AI          | OpenCode + MCP servers                |
+| Languages   | Python (Miniconda), Node.js, Go, Rust |
+| Kubernetes  | kubectl, kubectx, k9s, aws-vault      |
 
 ## 빠른 시작
 
@@ -23,6 +23,7 @@ cd ~/dotfiles
 ```
 
 Fish를 기본 셸로 설정:
+
 ```bash
 chsh -s $(which fish)
 ```
@@ -59,6 +60,7 @@ dotfiles/
 ## 주요 단축키
 
 ### Neovim (LazyVim)
+
 - `<Space>` - Leader
 - `<Space>ff` - 파일 찾기
 - `<Space>fg` - 텍스트 검색
@@ -66,6 +68,7 @@ dotfiles/
 - `<Space>gg` - LazyGit
 
 ### WezTerm
+
 - `Cmd+D` - 수직 분할
 - `Cmd+Shift+D` - 수평 분할
 - `Cmd+H/J/K/L` - 패널 이동
