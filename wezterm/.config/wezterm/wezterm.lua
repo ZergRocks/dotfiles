@@ -14,6 +14,7 @@ config.enable_tab_bar = true
 config.enable_scroll_bar = true
 -- crash 방지 옵션들
 config.front_end = "WebGpu"  -- 또는 "OpenGL"
+config.native_macos_fullscreen_mode = false
 
 -- 테마
 config.color_scheme = "Silk Dark (base16)"
