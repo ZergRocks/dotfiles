@@ -51,6 +51,11 @@ vim.api.nvim_create_autocmd({ "BufEnter", "BufRead" }, {
 
           -- 진단도 비활성화
           vim.diagnostic.enable(false, { bufnr = bufnr })
+
+          -- treesitter highlight 비활성화 (jinja 템플릿 파싱 에러 방지)
+          if vim.treesitter.stop then
+            vim.treesitter.stop(bufnr)
+          end
         end
       end)
     else

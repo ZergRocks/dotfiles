@@ -5,6 +5,9 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = ","
 
+-- Copilot 고스트 텍스트 사용 (VSCode 스타일)
+vim.g.ai_cmp = false
+
 -- Enable LazyVim auto format
 vim.g.autoformat = true
 

@@ -250,6 +250,32 @@ else
   done
 fi
 
+# --------------------------------
+# 3.0 Fish Path Compatibility (Intel → Apple Silicon migration)
+# If tools still reference /usr/local/bin/fish (old Intel Homebrew prefix),
+# optionally create a compatibility symlink. Skips if already present.
+if $IS_APPLE_SILICON; then
+  if [[ -x "/opt/homebrew/bin/fish" ]] && [[ ! -e "/usr/local/bin/fish" ]]; then
+    print_info "Creating optional /usr/local/bin/fish symlink for legacy references"
+    # Use sudo only if /usr/local/bin not writable
+    if [[ -w "/usr/local/bin" ]]; then
+      ln -s /opt/homebrew/bin/fish /usr/local/bin/fish 2>/dev/null || true
+    else
+      print_warning "/usr/local/bin requires sudo — attempting with sudo"
+      sudo ln -s /opt/homebrew/bin/fish /usr/local/bin/fish 2>/dev/null || true
+    fi
+    if [[ -L "/usr/local/bin/fish" ]]; then
+      print_status "Symlink created: /usr/local/bin/fish → /opt/homebrew/bin/fish"
+    else
+      print_warning "Symlink not created (permission or existing file) — manual check recommended"
+    fi
+  else
+    if [[ -e "/usr/local/bin/fish" ]]; then
+      print_info "Existing /usr/local/bin/fish found (legacy or manual install)"
+    fi
+  fi
+fi
+
 # ================================================
 # 3.1 GIT SETUP (Use system git to avoid libcurl issues)
 # ================================================

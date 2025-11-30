@@ -71,6 +71,9 @@ set -gx FZF_DEFAULT_COMMAND 'fd --type f --hidden --follow --exclude .git'
 alias v="nvim"
 alias vi="nvim"
 alias vim="nvim"
+alias c="opencode"
+alias vs="code /Users/an/Development/Development.code-workspace"
+alias a="agy /Users/an/Development/Development.code-workspace"
 alias lg="lazygit"
 alias ll="ls -la"
 alias la="ls -A"
@@ -97,3 +100,6 @@ starship init fish | source
 # Disable automatic window title setting by fish to prevent conflicts with tmux
 function fish_title
 end
+
+# Added by Antigravity
+fish_add_path /Users/an/.antigravity/antigravity/bin

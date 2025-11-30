@@ -59,3 +59,6 @@ keymap.set("v", "<C-_>", "gc", { remap = true, desc = "주석 토글" }) -- 터�
 -- Normal 모드에서 현재 줄 주석 토글
 keymap.set("n", "<C-/>", "gcc", { remap = true, desc = "주석 토글 (현재 줄)" })
 keymap.set("n", "<C-_>", "gcc", { remap = true, desc = "주석 토글 (현재 줄)" })
+
+-- Copilot 토글 (attach/detach)
+keymap.set("n", "<leader>at", ":Copilot toggle<CR>", { desc = "Copilot toggle" })
