@@ -6,7 +6,7 @@ GitHub Copilot이 MCP (Model Context Protocol) 서버들과 정상적으로 연�
 
 ## 테스트 일시
 
-- **날짜**: 2025-12-01
+- **날짜**: 2024-12-01
 - **테스터**: GitHub Copilot Agent
 - **이슈**: [Test] Copilot MCP 연동 테스트
 
