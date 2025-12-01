@@ -41,6 +41,11 @@
       "type": "local",
       "command": ["uvx", "--from", "git+https://github.com/oraios/serena", "serena", "start-mcp-server"],
       "enabled": true
+    },
+    "github": {
+      "type": "local",
+      "command": ["npx", "-y", "@modelcontextprotocol/server-github"],
+      "enabled": true
     }
   }
 }

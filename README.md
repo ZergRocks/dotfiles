@@ -55,7 +55,16 @@ dotfiles/
 4. Miniconda + UV (Python)
 5. Fish + Fisher 플러그인
 6. LazyVim + 플러그인
-7. OpenCode + MCP 서버 (Serena, Context7 등)
+7. OpenCode + MCP 서버 (Sequential Thinking, Context7, Serena, GitHub 등)
+
+### MCP 서버 설정
+
+`opencode/.config/opencode/opencode.json`에서 다음 MCP 서버들이 설정됨:
+
+- **Sequential Thinking**: 순차적 사고 지원 (`@modelcontextprotocol/server-sequential-thinking`)
+- **Context7**: 원격 컨텍스트 관리 (https://mcp.context7.com/mcp)
+- **Serena**: 로컬 AI 지원 (https://github.com/oraios/serena)
+- **GitHub MCP**: GitHub 레포지토리와 상호작용 (`@modelcontextprotocol/server-github`)
 
 ## 주요 단축키
 
